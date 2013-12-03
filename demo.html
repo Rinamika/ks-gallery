@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ks-gallery demo</title>
+    <link rel="stylesheet" href="jquery.ks.css"/>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+    <script type="text/javascript" src="jquery.ks.js"></script>
+    <style>
+        body {
+            font: 14px/1.2 Helvetica, Arial, FreeSans, sans-serif;
+        }
+        .fixed {
+            max-width: 600px;
+            margin: 0 auto 15px;
+            box-sizing: border-box;
+        }
+        #ks-target-fixed {
+            width: 600px;
+            margin: 0 auto 30px;
+        }
+
+        #ks-target-stretch {
+            margin: 30px 10%;
+        }
+
+        pre {
+            border: 1px solid #eee;
+            border-radius: 4px;
+            background: #fafafa;
+            padding: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="ks">
+        <div data-height="200" data-width="168">
+            <img src="data/1.jpg" />
+        </div>
+        <div data-height="200" data-width="267">
+            <img src="data/2.jpg" />
+        </div>
+        <div data-height="200" data-width="300">
+            <img src="data/3.jpg" />
+        </div>
+        <div data-height="200" data-width="300">
+            <img src="data/4.jpg" />
+        </div>
+        <div data-height="200" data-width="134">
+            <img src="data/5.jpg" />
+        </div>
+        <div data-height="200" data-width="300">
+            <img src="data/6.jpg" />
+        </div>
+    </div>
+
+    <h1 class="fixed">ks-gallery demo</h1>
+
+    <h3 class="fixed">Markup</h3>
+    <pre class="fixed">
+&lt;div class=&quot;ks&quot;&gt;
+    &lt;div data-height=&quot;200&quot; data-width=&quot;168&quot;&gt;
+        &lt;img src=&quot;data/1.jpg&quot; /&gt;
+    &lt;/div&gt;
+    &lt;div data-height=&quot;200&quot; data-width=&quot;267&quot;&gt;
+        &lt;img src=&quot;data/2.jpg&quot; /&gt;
+    &lt;/div&gt;
+    &lt;div data-height=&quot;200&quot; data-width=&quot;300&quot;&gt;
+        &lt;img src=&quot;data/3.jpg&quot; /&gt;
+    &lt;/div&gt;
+    &lt;div data-height=&quot;200&quot; data-width=&quot;300&quot;&gt;
+        &lt;img src=&quot;data/4.jpg&quot; /&gt;
+    &lt;/div&gt;
+    &lt;div data-height=&quot;200&quot; data-width=&quot;134&quot;&gt;
+        &lt;img src=&quot;data/5.jpg&quot; /&gt;
+    &lt;/div&gt;
+    &lt;div data-height=&quot;200&quot; data-width=&quot;300&quot;&gt;
+        &lt;img src=&quot;data/6.jpg&quot; /&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</pre>
+    <h3 class="fixed">Fixed example</h3>
+    <pre class="fixed">
+$('.ks').ks({
+    target: "#ks-target-fixed",
+    targetWidth: "600",
+    spacing: "10"
+});</pre>
+    <div id="ks-target-fixed"></div>
+
+    <h3 class="fixed">Stretchable example</h3>
+    <pre class="fixed">
+$('.ks').ks({
+    target: "#ks-target-stretch",
+    spacing: 10
+});</pre>
+    <div id="ks-target-stretch"></div>
+    
+    <h3 class="fixed">Live examples</h3>
+    <div class="fixed">
+        <ul>
+            <li><a href="http://yusakh.ru/gallery/">http://yusakh.ru/gallery/</a></li>
+            <li><a href="http://chekhov-book-museum.ru/gallery/">http://chekhov-book-museum.ru/gallery/</a></li>
+        </ul>
+    </div>
+
+    <script>
+        jQuery(function ($) {
+            $('.ks').ks({
+                target: "#ks-target-fixed",
+                targetWidth: 600,
+                spacing: 10
+            });
+
+            $('.ks').ks({
+                target: "#ks-target-stretch",
+                spacing: 10
+            });
+        });
+    </script>
+</body>
+</html>

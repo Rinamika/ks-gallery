@@ -1,0 +1,33 @@
+.ks {
+	display: none;
+}
+
+.__ks_target_selector {
+	overflow: hidden;
+}
+.__ks_target_selector .ks-row {
+	overflow: hidden;
+	line-height: 0;
+	font-size: 0;
+	white-space: nowrap;
+}
+
+.__ks_target_selector .ks-row > div {
+	display: inline-block;
+	margin: 0 10px 10px 0;
+	position:relative;
+	overflow: hidden;
+}
+
+.__ks_target_selector .ks-row > div img {
+	height:100%;
+	position: absolute;
+	top:50%;
+	left: 50%;
+    max-width: none;
+	-webkit-transform: translate(-50%, -50%);
+	-moz-transform: translate(-50%, -50%);
+	-ms-transform: translate(-50%, -50%);
+	-o-transform: translate(-50%, -50%);
+	transform: translate(-50%, -50%);
+}
