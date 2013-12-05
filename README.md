@@ -1,17 +1,17 @@
 ks-gallery
 ==========
-ks-gallery is a jQuery plugin that transformates your ugly photogallery to beautiful piece of Flickr-like gallery style =)
+ks-gallery is a jQuery plugin that transforms your ugly photogallery to a beautiful piece of Flickr-like gallery style =)
 
 Usage
 -----
-1. Include jquery.ks.js and jquery.ks.css in the head of your page. Don't forget to include jQuery firstly.
+1. Include jquery.ks.js and jquery.ks.css to the head of html template. Don't forget to include jQuery first.
 ``` html
 <link rel="stylesheet" href="jquery.ks.css"/>
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
 <script type="text/javascript" src="jquery.ks.js"></script>
 ```
 
-2. Add to your site markup similar to showed below.
+2. Add the following markup to your html template where necessary.
 ``` html
 <div class="ks">
     <div data-height="200" data-width="168">
@@ -36,8 +36,8 @@ Usage
 <div id="ks-target"></div>
 ```
 
-3. Add in the end of html document a piece of code, similar to below (choose one according to your wishes).
-    * If you want a fixed gallery, your code will be look like this:
+3. In the end of html document, add a piece of code, similar to below (choose one according to your wishes).
+    * If you want a fixed gallery, your code will look like this:
 ``` javascript
 $('.ks').ks({
     target: "#ks-target-fixed",
