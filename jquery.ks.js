@@ -6,7 +6,8 @@
 		options.onRealign = options.onRealign || function(){};
 		options.target = $(options.target || '.ks-target');
 		options.spacing = parseInt(options.spacing, 10) || 0;
-		var context = $(this);
+		var context = $(this),
+            isIE8 = /MSIE\s8/.test(navigator.userAgent);
 
 		$(options.target).addClass('__ks_target_selector');
 		var fill = function () {
@@ -23,7 +24,7 @@
 						height: $(item).data('height') + 'px'
 					});
 
-					if (/MSIE\s8/.test(navigator.userAgent)) {
+					if (isIE8) {
 						var selfWidth = item.width(), selfHeight = item.height();
 						item.find('img').css({
 							marginTop: "-" + (selfHeight / 2) + "px",
@@ -44,11 +45,13 @@
 							var iWidth = parseInt($(this).data('width'), 10);
 							var initialWidth = iWidth / width * 100;
 							var holdSpace = iWidth / w * 100;
+                            var percentageWidth = (initialWidth - (pOverflow / 100 * holdSpace));
 							$(this).css({
-								width: (initialWidth - (pOverflow / 100 * holdSpace)) + '%'
+								width: percentageWidth + '%'
 							});
-							if (/MSIE\s8/.test(navigator.userAgent)) {
-								var selfWidth = $(this).width(), selfHeight = $(this).height();
+							if (isIE8) {
+                                var selfWidth = width / 100 * percentageWidth;
+								var selfHeight = $(this).height();
 								$(this).find('img').css({
 									marginTop: "-" + (selfHeight / 2) + "px",
 									marginLeft: "-" + (selfWidth / 2) + "px"
